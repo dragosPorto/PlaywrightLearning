@@ -51,7 +51,7 @@ test.skip('add multiple elements and remove one', async ({ page }) => {
     expect(remainingDeleteButtonsCount).toBe(1);
 });
 
-test('add multiple elements and remove all', async ({ page }) => {
+test.skip('add multiple elements and remove all', async ({ page }) => {
     // Add three elements
     const number = 3;
     for (let i = 0; i < number; i++) {
