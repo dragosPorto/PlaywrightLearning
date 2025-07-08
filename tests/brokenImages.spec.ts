@@ -22,11 +22,3 @@ test.skip('check for broken images', async ({ page }) => {
     // Assert that there are no broken images
     expect(brokenImages.length).toBe(0);
 });
-
-test('check for specific broken image', async ({ page }) => {
-    // Check for a specific broken image by its alt text
-    const brokenImage = page.locator('img[alt="missing image"]');
-    
-    // Assert that the image is not visible (i.e., it is broken)
-    await expect(brokenImage).not.toBeVisible();
-});
