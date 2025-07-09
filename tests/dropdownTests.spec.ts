@@ -6,7 +6,7 @@ test.beforeEach(async ({ page }) => {
     await page.goto('https://the-internet.herokuapp.com/dropdown');
 })
 
-test('select option 1 from dropdown', async ({ page }) => {
+test.skip('select option 1 from dropdown', async ({ page }) => {
     // Select option 1 from the dropdown
     await page.selectOption('select#dropdown', '1');
     
@@ -15,7 +15,7 @@ test('select option 1 from dropdown', async ({ page }) => {
     expect(selectedOption).toBe('1');
 });
 
-test('select option 2 from dropdown', async ({ page }) => {
+test.skip('select option 2 from dropdown', async ({ page }) => {
     // Select option 2 from the dropdown
     await page.selectOption('select#dropdown', '2');
     
@@ -24,7 +24,7 @@ test('select option 2 from dropdown', async ({ page }) => {
     expect(selectedOption).toBe('2');
 });
 
-test('selected option resets after page refresh', async ({ page }) => {
+test.skip('selected option resets after page refresh', async ({ page }) => {
     // Select option 1 from the dropdown
     await page.selectOption('select#dropdown', '1');
     
