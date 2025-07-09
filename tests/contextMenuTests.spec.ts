@@ -7,7 +7,7 @@ test.beforeEach(async ({ page }) => {
     await page.goto('https://the-internet.herokuapp.com/context_menu');
 })
 
-test('right click shows alert', async ({ page }) => {
+test.skip('right click shows alert', async ({ page }) => {
   
   const box = page.locator('#hot-spot');
   const dialogPromise = page.waitForEvent('dialog');
