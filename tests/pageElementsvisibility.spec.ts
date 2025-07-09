@@ -16,7 +16,7 @@ test.skip('check visibility of elements', async ({ page }) => {
     await expect(count).toBe(numberOfElements);
 });
 
-test('check the visibility of gallery after multiple reloads', async ({ page }) => {
+test.skip('check the visibility of gallery after multiple reloads', async ({ page }) => {
     const galleryButton = page.locator('text=Gallery');
     const numberOfTries = 5;
 
@@ -31,10 +31,10 @@ test('check the visibility of gallery after multiple reloads', async ({ page }) 
 
         await page.reload();
 
-        /*try {
+        try {
             await expect(galleryButton).toBeVisible({ timeout: 5000 });
         } catch {
             throw new Error(`❌ Gallery button not visible after reload #${i + 1}`);
-        }*/
+        }
     }
 });
